@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%x\n" $(( 0x$WATER + 0x$STIR ))
+echo -n "$WATER$STIR" | tr 'waterstir' '0123456789' | perl -e 'print pack("H*", <>)' | tr -d '\n' | tr '0123456789' 'bestchol'
