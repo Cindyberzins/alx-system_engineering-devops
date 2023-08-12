@@ -1,2 +1,2 @@
-#!/bin/bash
-sed -n 'p;n'
+#!/bin/bash 
+awk 'NR%2==1' "$1"
